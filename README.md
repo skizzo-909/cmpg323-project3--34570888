@@ -8,6 +8,6 @@ A `web application` is a client-server application program that is stored on a r
 
 The process of creating an application that can be accessed through a web browser utilizing client-side and server-side programming is known as `web application development`, which is what this project is all about.
 
-A web application is first conceptualized by developers in order to solve a particular problem, after which the app is designed, developed using the appropriate framework, tested, and then deployed.
+A web application is first conceptualized by developers in order to solve a particular problem, after which the app is designed, developed using the appropriate framework, tested, and then deployed. Below is an overview of the process of web development:
 
 ![web-application-development-process](https://user-images.githubusercontent.com/83671816/189495953-8d7c0a28-0b34-4eaa-8596-72f194712160.png)
