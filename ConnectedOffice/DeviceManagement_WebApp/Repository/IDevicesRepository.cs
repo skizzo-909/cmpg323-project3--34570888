@@ -4,6 +4,6 @@ namespace DeviceManagement_WebApp.Repository
 {
     public interface IDevicesRepository : IGenericRepository<Device>
     {
-        Device GetMostRecentService();
+        Device GetMostRecentDevice();
     }
 }

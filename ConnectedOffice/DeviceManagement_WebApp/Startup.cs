@@ -42,6 +42,7 @@ namespace DeviceManagement_WebApp
             // To fix dependency injection issue
             services.AddTransient(typeof(IGenericRepository<>), typeof(GenericRepository<>));
             services.AddTransient<ICategoriesRepository, CategoriesRepository>();
+            services.AddTransient<IDevicesRepository, DevicesRepository>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
