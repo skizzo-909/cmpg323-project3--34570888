@@ -50,10 +50,5 @@ namespace DeviceManagement_WebApp.Repository
             _context.Update(entity);
             _context.SaveChanges();
         }
-
-        public bool exists(Guid id)
-        {
-            return _context.Service.Any(e => e.ServiceId == id);
-        }
     }
 }
