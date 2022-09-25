@@ -4,9 +4,9 @@ using System.Linq;
 
 namespace DeviceManagement_WebApp.Repository
 {
-    public class ProductRepository : GenericRepository<Category>, ICategoriesRepository
+    public class CategoriesRepository : GenericRepository<Category>, ICategoriesRepository
     {
-        public ProductRepository(ConnectedOfficeContext context) : base(context)
+        public CategoriesRepository(ConnectedOfficeContext context) : base(context)
         {
         }
 
