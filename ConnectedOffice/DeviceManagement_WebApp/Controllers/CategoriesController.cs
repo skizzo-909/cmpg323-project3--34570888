@@ -15,22 +15,20 @@ namespace DeviceManagement_WebApp.Controllers
     [Authorize]
     public class CategoriesController : Controller
     {
-        private readonly ConnectedOfficeContext _context;
         private readonly ICategoriesRepository _categoriesRepository;
 
-        public CategoriesController(ConnectedOfficeContext context, ICategoriesRepository categoriesRepository)
+        public CategoriesController(ICategoriesRepository categoriesRepository)
         {
             _categoriesRepository = categoriesRepository;
-            _context = context;
         }
 
-        // GET: Method that gets all Categories and displays them
+        // GET: Index() method that gets all Categories and displays them when the page is loaded
         public async Task<IActionResult> Index()
         {
             return View(_categoriesRepository.GetAll());
         }
 
-        // GET: Method that displays the details of categories by id
+        // GET: Details() method that displays the details of categories by id
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -53,7 +51,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
-        // POST: Method to create a category
+        // POST: Create() method to create a category
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -67,7 +65,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Categories/Edit/5
+        // GET: Edit() method that gets a category by its unique id
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null)
@@ -83,7 +81,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
-        // POST: Method to edit a category
+        // POST: Edit() method that gets a category by id then updates any changes
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -113,7 +111,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Categories/Delete/5
+        // GET: Delete() method that gets acategory by id and deletes it
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -130,21 +128,22 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
-        // POST: Method that deletes a category by its id
+        // POST: Delete() method that gets a category by its id, then delete it by calling the Remove() method
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             // get the id of a category
             var category = _categoriesRepository.GetById(id);
+            // remove a category
             _categoriesRepository.Remove(category);
             return RedirectToAction(nameof(Index));
         }
-
-        // Method to check if category exists by using its id
+        
         private bool CategoryExists(Guid id)
         {
-            return _context.Category.Any(e => e.CategoryId == id);
+            // reference of method created in repository class
+            return _categoriesRepository.CategoryExists(id);
         }
     }
 }
