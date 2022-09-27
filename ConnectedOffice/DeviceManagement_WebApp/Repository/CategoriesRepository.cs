@@ -14,8 +14,8 @@ namespace DeviceManagement_WebApp.Repository
             return _context.Category.OrderByDescending(service => service.DateCreated).FirstOrDefault();
         }
 
-        // Method to check if category exists by using its id
-        private bool CategoryExists(Guid id)
+        // A method to check if category exists by using its id
+        public bool CategoryExists(Guid id)
         {
             return _context.Category.Any(cat => cat.CategoryId == id);
         }
