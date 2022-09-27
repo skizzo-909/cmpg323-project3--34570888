@@ -28,7 +28,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(_categoriesRepository.GetAll());
         }
 
-        // GET: Details() method that displays the details of categories by id
+        // GET: Details() method that displays the details of a Category by id
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null)
@@ -51,7 +51,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View();
         }
 
-        // POST: Create() method to create a category
+        // POST: Create() method to create a Category by generating a new id then adding it to the database
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -81,7 +81,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
-        // POST: Edit() method that gets a category by id then updates any changes
+        // POST: Edit() method that gets a category by its id then updates any changes
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
@@ -94,7 +94,7 @@ namespace DeviceManagement_WebApp.Controllers
             }
             try
             {
-                // update a category and save the changes
+                // update a Category and save the changes
                 _categoriesRepository.Update(category);
             }
             catch (DbUpdateConcurrencyException)
@@ -111,7 +111,7 @@ namespace DeviceManagement_WebApp.Controllers
             return RedirectToAction(nameof(Index));
         }
 
-        // GET: Delete() method that gets acategory by id and deletes it
+        // GET: Delete() method that gets a Category by its id and delete it
         public async Task<IActionResult> Delete(Guid? id)
         {
             if (id == null)
@@ -128,7 +128,7 @@ namespace DeviceManagement_WebApp.Controllers
             return View(category);
         }
 
-        // POST: Delete() method that gets a category by its id, then delete it by calling the Remove() method
+        // POST: Delete() method that gets a Category by its id, then delete it by calling the Remove() method
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(Guid id)
