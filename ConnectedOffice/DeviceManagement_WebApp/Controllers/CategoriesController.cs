@@ -139,7 +139,7 @@ namespace DeviceManagement_WebApp.Controllers
             _categoriesRepository.Remove(category);
             return RedirectToAction(nameof(Index));
         }
-        
+
         private bool CategoryExists(Guid id)
         {
             // reference of method created in repository class
