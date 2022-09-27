@@ -10,6 +10,8 @@ namespace DeviceManagement_WebApp.Repository
     public class GenericRepository<T> : IGenericRepository<T> where T : class
     {
         protected readonly ConnectedOfficeContext _context;
+
+        // any reference made to the 'SaveChanges()' method is to substitute the 'SaveChangesAsync()' method
         public GenericRepository(ConnectedOfficeContext context)
         {
             _context = context;
@@ -32,6 +34,7 @@ namespace DeviceManagement_WebApp.Repository
         {
             return _context.Set<T>().ToList();
         }
+        // changed the data type of 'id' to Guid since we're using a uniqueidentifier as our primary key
         public T GetById(Guid? id)
         {
             return _context.Set<T>().Find(id);
@@ -46,6 +49,7 @@ namespace DeviceManagement_WebApp.Repository
             _context.Set<T>().RemoveRange(entities);
             _context.SaveChanges();
         }
+        // this method is used to replace the default 'Update()' method of the controller
         public void Update(T entity)
         {
             _context.Update(entity);
