@@ -13,12 +13,10 @@ namespace DeviceManagement_WebApp.Controllers
 {
     public class ZonesController : Controller
     {
-        private readonly ConnectedOfficeContext _context;
         private readonly IZonesRepository _zonesRepository;
 
-        public ZonesController(ConnectedOfficeContext context, IZonesRepository zonesRepository)
+        public ZonesController(IZonesRepository zonesRepository)
         {
-            _context = context;
             _zonesRepository = zonesRepository;
         }
 
