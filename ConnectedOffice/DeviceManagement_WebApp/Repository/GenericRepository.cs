@@ -4,6 +4,8 @@ using System;
 using DeviceManagement_WebApp.Data;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Mvc;
+using System.Threading.Tasks;
 
 namespace DeviceManagement_WebApp.Repository
 {
@@ -11,7 +13,7 @@ namespace DeviceManagement_WebApp.Repository
     {
         protected readonly ConnectedOfficeContext _context;
 
-        // any reference made to the 'SaveChanges()' method is to substitute the 'SaveChangesAsync()' method
+        // any reference made to the 'SaveChanges()' method is to substitute the 'SaveChangesAsync()' method used in all controllers
         public GenericRepository(ConnectedOfficeContext context)
         {
             _context = context;
@@ -49,7 +51,7 @@ namespace DeviceManagement_WebApp.Repository
             _context.Set<T>().RemoveRange(entities);
             _context.SaveChanges();
         }
-        // this method is used to replace the default 'Update()' method of the controller
+        // this method is used to replace the default 'Update()' method of the controllers
         public void Update(T entity)
         {
             _context.Update(entity);
