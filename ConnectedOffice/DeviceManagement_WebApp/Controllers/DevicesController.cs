@@ -29,7 +29,7 @@ namespace DeviceManagement_WebApp.Controllers
         // GET: Index() method that gets all Devices and displays them when the page is loaded
         public async Task<IActionResult> Index()
         {
-            return View(_devicesRepository.GetAll());
+            return View(_devicesRepository.GetDevices());
         }
 
         // GET: Details() method that displays the details of a Device by id
@@ -40,7 +40,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var device = _devicesRepository.GetById(id);
+            var device = _devicesRepository.GetDeviceById(id);
             if (device == null)
             {
                 return NotFound();
@@ -80,7 +80,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var device = _devicesRepository.GetById(id);
+            var device = _devicesRepository.GetDeviceById(id);
             if (device == null)
             {
                 return NotFound();
@@ -130,7 +130,7 @@ namespace DeviceManagement_WebApp.Controllers
                 return NotFound();
             }
 
-            var device = _devicesRepository.GetById(id);
+            var device = _devicesRepository.GetDeviceById(id);
             if (device == null)
             {
                 return NotFound();
@@ -145,7 +145,7 @@ namespace DeviceManagement_WebApp.Controllers
         public async Task<IActionResult> DeleteConfirmed(Guid id)
         {
             // Get the id of the device
-            var device = _devicesRepository.GetById(id);
+            var device = _devicesRepository.GetDeviceById(id);
             // remove a category
             _devicesRepository.Remove(device);
             return RedirectToAction(nameof(Index));
