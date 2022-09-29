@@ -13,20 +13,20 @@ A web application is first conceptualized by developers in order to solve a part
 ![web-application-development-process](https://user-images.githubusercontent.com/83671816/189495953-8d7c0a28-0b34-4eaa-8596-72f194712160.png)
 
 # Design Patterns in C#
-Design patterns offer comprehensive solutions or a flexible approach to solving typical design issues. In the object-oriented world, design patterns are a reusable solution to typical software design issues that occur frequently in the creation of practical applications. It is a model or explanation of how to address issues that can be applied in a variety of circumstances.
+`Design patterns` offer comprehensive solutions or a flexible approach to solving typical design issues. In the object-oriented world, design patterns are a reusable solution to typical software design issues that occur frequently in the creation of practical applications. It is a model or explanation of how to address issues that can be applied in a variety of circumstances.
 
 # What is a Repository Design Pattern?
-By definition, the Repository Design Pattern in C# acts as a bridge between the domain and data mapping layers by allowing access to the domain objects through a collection-like interface. Data access logic is divided and mapped to business logic components using the repository design pattern. It performs data access logic while interacting with the domain entities. In the Repository pattern, interfaces are used to communicate between domain entities, data access logic, and business logic. It shields the business logic from the specifics of data access.
+By definition, the `Repository Design Pattern` in C# acts as a bridge between the domain and data mapping layers by allowing access to the domain objects through a collection-like interface. Data access logic is divided and mapped to business logic components using the repository design pattern. It performs data access logic while interacting with the domain entities. In the Repository pattern, interfaces are used to communicate between domain entities, data access logic, and business logic. It shields the business logic from the specifics of data access.
 
 # Screenshots of application
 # Step 1:
-The first step is to register a user.
+The first step is to `register` a user.
 ![register](https://user-images.githubusercontent.com/83671816/193027755-6a4e597e-5c38-49df-a154-58e6a09a7023.png)
 # Step 2:
-After a user has been registered, they can then log into the application. Where they'll then be redirected to the home page of the application.
+After a user has been registered, they can then `log` into the application. Where they'll then be redirected to the home page of the application.
 ![login](https://user-images.githubusercontent.com/83671816/193028242-0aba0ecc-bb91-43b1-b6f3-d46288ef5035.png)
 # Step 3:
-Once a user has been logged into the application, they can then decide to create a Zone, Category, or Device. The application also has the fucntionality of viewing the details of a Device, Category, or Zone. They can edit the details of a either of these three or even delete them.
+Once a user has been `logged` into the application, they can then decide to `create` a Zone, Category, or Device. The application also has the fucntionality of viewing the `details` of a Device, Category, or Zone. They can `edit` the details of a either of these three or even `delete` them.
 
 ## An example of creating a Device:
 Device home page:
