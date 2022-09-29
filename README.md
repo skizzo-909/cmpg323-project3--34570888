@@ -33,4 +33,13 @@ Device home page:
 ![device home page](https://user-images.githubusercontent.com/83671816/193029819-b9a2daba-f74a-4b40-92e2-0fad98f15f89.png)
 Create Device Page:
 ![create device](https://user-images.githubusercontent.com/83671816/193028918-06e4e186-ee60-4cd4-836d-a96f93aeae84.png)
-
+Device details: 
+![device details](https://user-images.githubusercontent.com/83671816/193030443-7767f246-ca3d-4c39-b312-fe88e5cd330b.png)
+Edit Device:
+![edit device](https://user-images.githubusercontent.com/83671816/193030517-6adab034-230a-4935-86dc-ca18ea97532e.png)
+Device edited:
+![device edited](https://user-images.githubusercontent.com/83671816/193030599-cd38bde7-7967-43cd-8b48-39e770028b5f.png)
+Delete device:
+![delete device](https://user-images.githubusercontent.com/83671816/193030674-b30aa884-de23-45fe-928c-67c68e5da332.png)
+Device deleted:
+![device deleted](https://user-images.githubusercontent.com/83671816/193030726-6b09e2e5-4c1e-4440-b559-768734b4bce6.png)
