@@ -19,3 +19,7 @@ Design patterns offer comprehensive solutions or a flexible approach to solving 
 By definition, the Repository Design Pattern in C# acts as a bridge between the domain and data mapping layers by allowing access to the domain objects through a collection-like interface. Data access logic is divided and mapped to business logic components using the repository design pattern. It performs data access logic while interacting with the domain entities. In the Repository pattern, interfaces are used to communicate between domain entities, data access logic, and business logic. It shields the business logic from the specifics of data access.
 
 # Screenshots of application
+# Step 1: The first step is to register a user.
+![register](https://user-images.githubusercontent.com/83671816/193027755-6a4e597e-5c38-49df-a154-58e6a09a7023.png)
+# Step 2: After a user has been registered, they can then log into the application. Where they'll then be redirected to the home page of the application.
+![login](https://user-images.githubusercontent.com/83671816/193028242-0aba0ecc-bb91-43b1-b6f3-d46288ef5035.png)
