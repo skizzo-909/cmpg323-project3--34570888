@@ -11,3 +11,11 @@ The process of creating an application that can be accessed through a web browse
 A web application is first conceptualized by developers in order to solve a particular problem, after which the app is designed, developed using the appropriate framework, tested, and then deployed. Below is an overview of the process of web development:
 
 ![web-application-development-process](https://user-images.githubusercontent.com/83671816/189495953-8d7c0a28-0b34-4eaa-8596-72f194712160.png)
+
+# Design Patterns in C#
+Design patterns offer comprehensive solutions or a flexible approach to solving typical design issues. In the object-oriented world, design patterns are a reusable solution to typical software design issues that occur frequently in the creation of practical applications. It is a model or explanation of how to address issues that can be applied in a variety of circumstances.
+
+# What is a Repository Design Pattern?
+By definition, the Repository Design Pattern in C# acts as a bridge between the domain and data mapping layers by allowing access to the domain objects through a collection-like interface. Data access logic is divided and mapped to business logic components using the repository design pattern. It performs data access logic while interacting with the domain entities. In the Repository pattern, interfaces are used to communicate between domain entities, data access logic, and business logic. It shields the business logic from the specifics of data access.
+
+# Screenshots of application
